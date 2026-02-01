@@ -86,9 +86,11 @@ function getAccessToken(code, callback) {
 
 
 function handleRequest(req, res) {
-    const parsedUrl = url.parse(req.url, true);
-    const pathname = parsedUrl.pathname;
 
+    const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
+
+    const pathname = parsedUrl.pathname;
+    console.log(pathname);
     // 📍 Главная страница — ссылка для авторизации
     if (pathname === '/') {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
