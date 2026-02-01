@@ -123,8 +123,11 @@ function handleRequest(req, res) {
     // 📍 Callback от HH.ru: /auth/callback?code=xxx&state=123
     else if (pathname === '/auth/callback') {
         //const { code, state } = parsedUrl.query;
-        const { state } = parsedUrl.query;
+        //const { state } = parsedUrl.query;
         const code = "GIT0MA16K61CAERNTNGAC50GLCBE98JUFRP4MT76OFJ554T51E9FAMM9C05UT1GU";
+
+        //const code = parsedUrl.searchParams.get('code');
+        //const state = parsedUrl.searchParams.get('state');
         //console.log(parsedUrl.query);
         //if (!code || state !== '123') {
         //    res.writeHead(400, { 'Content-Type': 'text/plain; charset=utf-8' });
