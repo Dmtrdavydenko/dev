@@ -138,6 +138,7 @@ function handleRequest(req, res) {
         console.log('✅ Получен code от HH.ru:', code);
         getAccessToken(code, (err, tokenData) => {
             console.log(tokenData);
+            process.env.HH_ACCESS_TOKEN = tokenData.access_token;
             if (err) {
                 res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
                 res.end('❌ Ошибка получения токена: ' + err.message);
