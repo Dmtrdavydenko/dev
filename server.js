@@ -22,8 +22,8 @@ function getAccessToken(code, callback) {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
             'Content-Length': postData.length,
-            'User-Agent': `Ассистент/1.0 (${process.env.MY_CONTACT})`,
-            "HH-User-Agent": `Ассистент/1.0 (${process.env.MY_CONTACT})`
+            'User-Agent': `HH-Assistant/1.0 (${process.env.MY_CONTACT})`,
+            "HH-User-Agent": `HH-Assistant/1.0 (${process.env.MY_CONTACT})`
         }
     };
 
